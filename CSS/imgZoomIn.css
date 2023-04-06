@@ -85,12 +85,4 @@ img {
 }
 .stickers .circle .img:hover {
   --f: 2;
-}
-@keyframes enlarge {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(3);
-  }
 }/*# sourceMappingURL=imgZoomIn.css.map */
