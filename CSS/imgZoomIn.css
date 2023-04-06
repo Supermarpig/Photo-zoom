@@ -1,0 +1,96 @@
+@charset "UTF-8";
+body,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dl,
+dd,
+input,
+select,
+form {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+/*讓H標籤字體100%*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+
+/*去掉小圓點*/
+ul {
+  list-style: none;
+}
+
+/*去掉文字傾斜*/
+em {
+  font-style: normal;
+}
+
+/*去掉下滑線*/
+a {
+  text-decoration: none;
+}
+
+/*在ie瀏覽器裡，被a標籤包著的img標籤紫色邊框清掉*/
+img {
+  border: none;
+}
+
+.stickers {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.stickers .circle .img {
+  --s: 280px;
+  --c1: #c02942;
+  --c2: #ecd078;
+  --b: 5px;
+  --f: 1;
+  --bgOption: content-box no-repeat center/ calc(100% /var(--f)) 100%;
+  --shirk: calc((var(--s)/var(--f) - var(--s))/2 - var(--b));
+  width: var(--s);
+  height: var(--s);
+  cursor: pointer;
+  transform: scale(var(--f));
+  transition: 0.5s;
+  padding-top: 100px;
+  border-radius: 0 0 999px 999px;
+  outline-offset: var(--shirk);
+  background: radial-gradient(circle closest-side, var(--c2) calc(99% - var(--b)), var(--c1) calc(100% - var(--b)), transparent 99%) var(--bgOption);
+  -webkit-mask: linear-gradient(#000 0 0) no-repeat center calc(0px - var(--shirk))/calc(100% / var(--f) - 2 * var(--b)) 50%, radial-gradient(circle closest-side, #000 99%, transparent) var(--bgOption);
+}
+.stickers .circle .img:hover {
+  --f: 2;
+}
+@keyframes enlarge {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(3);
+  }
+}/*# sourceMappingURL=imgZoomIn.css.map */
